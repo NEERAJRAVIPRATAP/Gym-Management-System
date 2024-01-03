@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Tainer-.###",
+ "creation": "2024-01-03 18:06:36.615054",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hourly_fee",
+  "monthly_fee",
+  "column_break_ci4xu",
+  "trainer_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "trainer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trainer Type",
+   "options": "Aerobics Instructor\nExercise Physiologist\nNutritionist\nPersonal Trainer"
+  },
+  {
+   "fieldname": "monthly_fee",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Monthly Fee"
+  },
+  {
+   "fieldname": "hourly_fee",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Hourly Fee"
+  },
+  {
+   "fieldname": "column_break_ci4xu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-03 19:13:14.178520",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Type Of Trainer",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
