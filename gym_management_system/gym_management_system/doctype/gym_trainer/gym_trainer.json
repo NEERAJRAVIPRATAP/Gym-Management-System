@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:first_name",
+ "creation": "2024-01-03 17:52:49.956401",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "age",
+  "column_break_9b4ym",
+  "gneder",
+  "dob",
+  "email",
+  "section_break_zilwp",
+  "phone_number",
+  "column_break_qtdi2",
+  "qualification",
+  "section_break_1oonn",
+  "trainer_fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_9b4ym",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gneder",
+   "fieldtype": "Select",
+   "label": "Gneder",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "section_break_zilwp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_qtdi2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Table",
+   "label": "Qualification",
+   "options": "Trainer Qualification"
+  },
+  {
+   "fieldname": "trainer_fee",
+   "fieldtype": "Table",
+   "label": "Trainer Fee",
+   "options": "Type Of Trainer"
+  },
+  {
+   "fieldname": "section_break_1oonn",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-03 19:27:18.879716",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Trainer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
