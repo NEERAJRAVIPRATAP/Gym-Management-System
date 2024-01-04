@@ -14,6 +14,9 @@ class GymTrainer(Document):
 		current_date = getdate()
 		age_in_years = current_date.year - dob.year - ((current_date.month, current_date.day) < (dob.month, dob.day))
 		self.age =  age_in_years
+
+
+
 	
 
 

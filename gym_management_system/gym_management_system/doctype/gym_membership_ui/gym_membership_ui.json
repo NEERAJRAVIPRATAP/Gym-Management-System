@@ -10,43 +10,39 @@
  "field_order": [
   "add_membership_section",
   "register_users",
+  "column_break_ehioj",
   "full_name",
+  "section_break_zxybq",
   "membership_plan",
-  "start_date",
-  "end_date",
   "column_break_lkfav",
+  "start_date",
+  "column_break_cusvf",
+  "end_date",
+  "column_break_uyhz1",
+  "section_break_pda3j",
+  "trainer_allocated",
+  "locker_allocate_section",
+  "locker_allocated",
+  "bill",
   "fee",
   "discount",
-  "final_amount",
-  "status",
-  "section_break_pda3j",
-  "locker_allocate",
-  "column_break_xcy3w",
-  "locker_end_date"
+  "payment_method",
+  "grand_total"
  ],
  "fields": [
   {
    "fieldname": "register_users",
    "fieldtype": "Link",
    "label": "Registers Member",
-   "options": "User",
+   "options": "Gym Member Name",
    "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "membership_plan",
-   "fieldtype": "Link",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Membership plans",
-   "options": "Gym Membership Plans"
-  },
-  {
-   "fieldname": "locker_allocate",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Locker Allocate",
-   "options": "Locker Data"
+   "label": "Subscription plans"
   },
   {
    "fieldname": "column_break_lkfav",
@@ -65,12 +61,6 @@
    "label": "Plan End Date"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "is_virtual": 1,
-   "label": "Status"
-  },
-  {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -80,7 +70,7 @@
   {
    "fieldname": "section_break_pda3j",
    "fieldtype": "Section Break",
-   "label": "Locker Allocate"
+   "label": "Trainer Allocate"
   },
   {
    "fieldname": "add_membership_section",
@@ -88,33 +78,68 @@
    "label": "Add Membership"
   },
   {
-   "fieldname": "column_break_xcy3w",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "locker_end_date",
-   "fieldtype": "Date",
-   "label": "Locker End Date"
-  },
-  {
    "fieldname": "discount",
    "fieldtype": "Percent",
-   "label": "Discount given"
-  },
-  {
-   "fieldname": "final_amount",
-   "fieldtype": "Currency",
-   "label": "Final Amount"
+   "label": "Discount %"
   },
   {
    "fieldname": "fee",
    "fieldtype": "Currency",
-   "label": "Fee"
+   "label": "Fee Amount"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "trainer_allocated",
+   "fieldtype": "Table",
+   "label": "Trainer_allocated",
+   "options": "Trainer child  in membership"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "UPI\nNet Banking\nCredit Card\nCash\nDebit Card"
+  },
+  {
+   "fieldname": "column_break_ehioj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cusvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uyhz1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zxybq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "locker_allocated",
+   "fieldtype": "Table",
+   "label": "Locker allocate",
+   "options": "Locker child in membership"
+  },
+  {
+   "fieldname": "locker_allocate_section",
+   "fieldtype": "Section Break",
+   "label": "Locker Allocate"
+  },
+  {
+   "fieldname": "bill",
+   "fieldtype": "Section Break",
+   "label": "Billing"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 10:42:20.939784",
+ "modified": "2024-01-04 16:11:42.903573",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",
