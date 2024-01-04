@@ -69,6 +69,12 @@
    "label": "Maximum Amount",
    "reqd": 1
   },
+   {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",  
+   "options": "Gym Member Name"
+  },
   {
    "fieldname": "gym_trainer",
    "fieldtype": "Link",

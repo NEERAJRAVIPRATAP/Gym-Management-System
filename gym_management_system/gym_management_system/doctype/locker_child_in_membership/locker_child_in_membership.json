@@ -8,52 +8,48 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "locker_no",
-  "locker_owner",
-  "section_break_vnbjm"
+  "locker_id",
+  "locker_member",
+  "section_break_vnbjm",
+  "locker_fee"
  ],
  "fields": [
   {
-   "fieldname": "locker_no",
-   "fieldtype": "Int",
-   "label": "Locker No."
+   "fieldname": "section_break_vnbjm",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "locker_owner",
+   "fieldname": "locker_id",
    "fieldtype": "Link",
-   "hidden": 1,
    "in_list_view": 1,
-   "label": "Owner",
-   "options": "User",
+   "label": "Locker No.",
+   "options": "Gym Locker"
+  },
+  {
+   "fieldname": "locker_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Gym Member Name",
    "unique": 1
   },
   {
-   "fieldname": "section_break_vnbjm",
-   "fieldtype": "Section Break"
+   "fieldname": "locker_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fee"
   }
  ],
  "index_web_pages_for_search": 1,
+ "istable": 1,
  "links": [],
- "modified": "2024-01-04 10:14:24.874495",
+ "modified": "2024-01-04 15:59:28.498564",
  "modified_by": "Administrator",
  "module": "Gym Management System",
- "name": "Locker Data",
+ "name": "Locker child in membership",
  "naming_rule": "Expression",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
