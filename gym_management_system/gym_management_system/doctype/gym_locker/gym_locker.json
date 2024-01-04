@@ -11,7 +11,6 @@
   "locker_id",
   "start_date",
   "end_date",
-  "gym_subscription",
   "gym_member",
   "status",
   "locker_type",
@@ -35,12 +34,6 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
-  },
-  {
-   "fieldname": "gym_subscription",
-   "fieldtype": "Link",
-   "label": "Gym Subscription",
-   "options": "Gym Subscription"
   },
   {
    "fieldname": "gym_member",
@@ -68,7 +61,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 15:54:17.182554",
+ "modified": "2024-01-04 19:24:24.679303",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Locker",
