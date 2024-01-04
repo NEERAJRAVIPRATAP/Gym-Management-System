@@ -10,8 +10,8 @@ class GymMembershipUI(Document):
 import frappe
 
 @frappe.whitelist()
-def get_username_from_email(email_address):
-    username = frappe.get_value("User", {"email": email_address}, "full_name")
+def get_username_from_email(user_doc):
+    username = frappe.get_value("Gym Member Name", {"name": user_doc}, "first_name", 'last_name' )
     return username
 
 @frappe.whitelist()

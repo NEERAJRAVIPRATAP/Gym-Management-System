@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestLockerData(FrappeTestCase):
+class TestLockerchildinmembership(FrappeTestCase):
 	pass

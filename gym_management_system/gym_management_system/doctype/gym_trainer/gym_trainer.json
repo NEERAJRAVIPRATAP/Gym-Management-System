@@ -18,10 +18,22 @@
   "section_break_zilwp",
   "phone_number",
   "column_break_qtdi2",
-  "qualification",
+  "higher_qualification",
+  "experience",
+  "certification",
+  "previous_work",
   "section_break_1oonn",
-  "trainer_fee",
-  "section_break_m6bug",
+  "zumba",
+  "zumba_fee",
+  "yoga",
+  "yoga_fee",
+  "cross_fit",
+  "cross_fit_fee",
+  "cardio",
+  "crdio_fee",
+  "weight_lifting",
+  "weight_lifting_fee",
+  "section_break_aqjzg",
   "user_details"
  ],
  "fields": [
@@ -83,38 +95,109 @@
    "fieldtype": "Section Break"
   },
   {
-   "bold": 1,
-   "fieldname": "qualification",
-   "fieldtype": "Table",
-   "label": "Qualification",
-   "options": "Trainer Qualification"
-  },
-  {
-   "bold": 1,
-   "fieldname": "trainer_fee",
-   "fieldtype": "Table",
-   "label": "Trainer Fee",
-   "options": "Type Of Trainer"
-  },
-  {
    "fieldname": "section_break_1oonn",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "user_details",
    "fieldtype": "Table",
-   "label": "User Details",
+   "label": "Member List",
    "options": "Trainer Member List"
   },
   {
-   "fieldname": "section_break_m6bug",
+   "fieldname": "higher_qualification",
+   "fieldtype": "Data",
+   "label": "Higher Qualification"
+  },
+  {
+   "fieldname": "previous_work",
+   "fieldtype": "Data",
+   "label": "Previous Work "
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Int",
+   "label": "Experience"
+  },
+  {
+   "fieldname": "certification",
+   "fieldtype": "Attach",
+   "label": "Certification"
+  },
+  {
+   "default": "0",
+   "fieldname": "zumba",
+   "fieldtype": "Check",
+   "label": "Zumba"
+  },
+  {
+   "default": "1500",
+   "depends_on": "eval:doc.zumba==1",
+   "fieldname": "zumba_fee",
+   "fieldtype": "Int",
+   "label": "Zumba Fee"
+  },
+  {
+   "default": "0",
+   "fieldname": "yoga",
+   "fieldtype": "Check",
+   "label": "Yoga"
+  },
+  {
+   "default": "1000",
+   "depends_on": "eval:doc.yoga==1",
+   "fieldname": "yoga_fee",
+   "fieldtype": "Int",
+   "label": "Yoga Fee"
+  },
+  {
+   "default": "0",
+   "fieldname": "cross_fit",
+   "fieldtype": "Check",
+   "label": "Cross Fit"
+  },
+  {
+   "default": "1200",
+   "depends_on": "eval:doc.cross_fit==1",
+   "fieldname": "cross_fit_fee",
+   "fieldtype": "Int",
+   "label": "Cross Fit Fee"
+  },
+  {
+   "default": "0",
+   "fieldname": "cardio",
+   "fieldtype": "Check",
+   "label": "Cardio"
+  },
+  {
+   "default": "1000",
+   "depends_on": "eval:doc.cardio==1",
+   "fieldname": "crdio_fee",
+   "fieldtype": "Int",
+   "label": "Crdio Fee"
+  },
+  {
+   "default": "0",
+   "fieldname": "weight_lifting",
+   "fieldtype": "Check",
+   "label": "Weight Lifting"
+  },
+  {
+   "default": "2000",
+   "depends_on": "eval:doc.weight_lifting==1",
+   "fieldname": "weight_lifting_fee",
+   "fieldtype": "Int",
+   "label": "Weight Lifting Fee"
+  },
+  {
+   "fieldname": "section_break_aqjzg",
    "fieldtype": "Section Break"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 10:43:28.800963",
+ "modified": "2024-01-04 13:56:24.136808",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Trainer",
