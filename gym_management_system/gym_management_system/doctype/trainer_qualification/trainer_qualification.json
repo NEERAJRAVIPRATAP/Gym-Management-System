@@ -15,24 +15,28 @@
  ],
  "fields": [
   {
+   "bold": 1,
    "fieldname": "qualification",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Qualification"
   },
   {
+   "bold": 1,
    "fieldname": "previous_work",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Previous Work"
   },
   {
+   "bold": 1,
    "fieldname": "experience",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Experience"
   },
   {
+   "bold": 1,
    "fieldname": "certification",
    "fieldtype": "Attach",
    "in_list_view": 1,
@@ -42,7 +46,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-03 19:07:55.019427",
+ "modified": "2024-01-03 23:46:37.050009",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Trainer Qualification",
