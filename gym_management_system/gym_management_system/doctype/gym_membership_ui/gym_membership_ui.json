@@ -25,9 +25,13 @@
   "locker_allocated",
   "bill",
   "fee",
+  "column_break_3voan",
+  "locker_amount",
+  "column_break_kcean",
   "discount",
   "payment_method",
-  "grand_total"
+  "grand_total",
+  "amended_from"
  ],
  "fields": [
   {
@@ -135,11 +139,35 @@
    "fieldname": "bill",
    "fieldtype": "Section Break",
    "label": "Billing"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership UI",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "locker_amount",
+   "fieldtype": "Currency",
+   "label": "Locker Fee amount"
+  },
+  {
+   "fieldname": "column_break_3voan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kcean",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 16:11:42.903573",
+ "modified": "2024-01-04 18:33:12.504041",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",

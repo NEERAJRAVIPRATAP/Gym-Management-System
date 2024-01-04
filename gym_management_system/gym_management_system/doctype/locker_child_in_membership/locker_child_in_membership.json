@@ -10,14 +10,10 @@
  "field_order": [
   "locker_id",
   "locker_member",
-  "section_break_vnbjm",
+  "locker_type",
   "locker_fee"
  ],
  "fields": [
-  {
-   "fieldname": "section_break_vnbjm",
-   "fieldtype": "Section Break"
-  },
   {
    "fieldname": "locker_id",
    "fieldtype": "Link",
@@ -38,12 +34,19 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Fee"
+  },
+  {
+   "fieldname": "locker_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Locker Type",
+   "options": "Medium@500\nBig@1000"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-04 15:59:28.498564",
+ "modified": "2024-01-04 18:16:05.898618",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Locker child in membership",

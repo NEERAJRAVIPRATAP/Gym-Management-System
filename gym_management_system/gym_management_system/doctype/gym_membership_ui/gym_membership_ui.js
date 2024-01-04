@@ -80,7 +80,16 @@ discount: function(frm){
 	frm.set_value('grand_total', c)
 	// frm.refresh_field('grand_total');
 
-}
+},
+
+refresh: function(frm){
+               let new_item = frm.add_child('add_child', {
+                   namee: "Vipulllll"
+               });
+               frm.refresh_field('add_child');
+},
+	
+
 
 	});
 	

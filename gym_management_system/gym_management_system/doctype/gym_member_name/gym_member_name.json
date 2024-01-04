@@ -21,7 +21,8 @@
   "section_break_rfzll",
   "gym_trainer",
   "gym_locker_details",
-  "gym_subscription_details"
+  "gym_subscription_details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -99,13 +100,23 @@
    "fieldname": "gym_subscription_details",
    "fieldtype": "Table",
    "label": "Gym Subscription Details",
-   "options": "Member Ship Details"
+   "options": "Subscription Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Member Name",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 16:17:35.927344",
+ "modified": "2024-01-04 19:02:12.315417",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
