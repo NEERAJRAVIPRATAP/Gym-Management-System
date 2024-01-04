@@ -1,82 +1,73 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "GS.-.YYYY.-.####",
- "creation": "2024-01-03 18:02:51.926857",
+ "autoname": "GM.-.CL.-.####",
+ "creation": "2024-01-04 13:51:00.229138",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "member_trainer",
   "subscription_type",
-  "amount_01",
-  "duration_subscription",
-  "section_break_fobqm",
-  "start_date",
-  "end_date",
-  "amended_from",
-  "min_amount",
-  "max_amount",
+  "start_time",
+  "end_time",
   "gym_member",
-  "gym_trainer"
+  "amended_from"
  ],
  "fields": [
+  {
+   "fieldname": "member_trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
   {
    "fieldname": "subscription_type",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Subscription Type",
+   "label": "Class type",
    "options": "Weight-Lifting\nZumba\nYoga\nCross-Fit\nCardio\nStrength-Fitness\nYoga",
    "reqd": 1
   },
   {
-   "fieldname": "amount_01",
-   "fieldtype": "Select",
-   "label": "Amount",
-   "options": "Weight-Lifting :- Rs.2000\nZumba :- Rs.3000\nYoga :- Rs.5000\nCross-Fit :- Rs.4000\nCardio :- Rs.5000\nStrength-Fitness :- Rs.3500"
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
   },
   {
-   "fieldname": "duration_subscription",
-   "fieldtype": "Select",
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "Duration ",
-   "options": "1 month\n3 months\n6 months\n12 months",
+   "label": "End Time",
    "reqd": 1
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member Name"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Gym Subscription",
+   "options": "Group Class",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "section_break_fobqm",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "min_amount",
-   "fieldtype": "Currency",
-   "label": "Minimum Amount",
-   "reqd": 1
-  },
-  {
-   "fieldname": "gym_trainer",
-   "fieldtype": "Link",
-   "label": "Gym Trainer",
-   "options": "Gym Trainer"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 12:53:07.104817",
+ "modified": "2024-01-04 13:55:21.678333",
  "modified_by": "Administrator",
  "module": "Gym Management System",
- "name": "Gym Subscription",
+ "name": "Group Class",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
