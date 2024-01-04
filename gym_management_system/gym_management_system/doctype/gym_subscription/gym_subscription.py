@@ -4,6 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
+
 @frappe.whitelist()
 def get_subscription_info(subscription_type):
 	amount_range = {
