@@ -31,29 +31,16 @@
   },
   {
    "fieldname": "amount_01",
-   "fieldtype": "Currency",
-   "label": "Amount"
+   "fieldtype": "Select",
+   "label": "Amount",
+   "options": "Weight-Lifting :- Rs.2000\nZumba :- Rs.3000\nYoga :- Rs.5000\nCross-Fit :- Rs.4000\nCardio :- Rs.5000\nStrength-Fitness :- Rs.3500"
   },
   {
    "fieldname": "duration_subscription",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Duration ",
-   "options": "30 Days\n45 Days\n60 Days\n120 Days",
-   "reqd": 1
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Start Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "End Date",
+   "options": "1 month\n3 months\n6 months\n12 months",
    "reqd": 1
   },
   {
@@ -92,7 +79,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-03 22:03:22.817741",
+ "modified": "2024-01-04 12:53:07.104817",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",
