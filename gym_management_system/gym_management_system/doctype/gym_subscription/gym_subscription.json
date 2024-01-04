@@ -11,9 +11,12 @@
   "subscription_type",
   "amount_01",
   "duration_subscription",
+  "section_break_fobqm",
   "start_date",
   "end_date",
-  "amended_from"
+  "amended_from",
+  "min_amount",
+  "max_amount"
  ],
  "fields": [
   {
@@ -31,9 +34,10 @@
   },
   {
    "fieldname": "duration_subscription",
-   "fieldtype": "Int",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Duration ",
+   "options": "30 Days\n45 Days\n60 Days\n120 Days",
    "reqd": 1
   },
   {
@@ -59,12 +63,28 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "section_break_fobqm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "min_amount",
+   "fieldtype": "Currency",
+   "label": "Minimum Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Amount",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-03 18:02:51.926857",
+ "modified": "2024-01-03 22:34:06.181087",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",
