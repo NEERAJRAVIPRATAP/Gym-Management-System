@@ -16,7 +16,7 @@
   "end_date",
   "amended_from",
   "min_amount",
-  "max_amount"
+  "max_amount",
   "gym_member",
   "gym_trainer"
  ],
@@ -80,7 +80,8 @@
    "fieldname": "max_amount",
    "fieldtype": "Currency",
    "label": "Maximum Amount",
-   "reqd": 1
+   "reqd": 1},
+   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
    "label": "Gym Member",
