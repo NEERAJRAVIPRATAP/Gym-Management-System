@@ -12,11 +12,16 @@
   "middle_name",
   "last_name",
   "dob",
+  "full_name",
   "column_break_9yqz2",
   "gender",
   "address",
   "email_address",
-  "contact"
+  "contact",
+  "section_break_rfzll",
+  "gym_trainer",
+  "gym_locker_details",
+  "gym_subscription_details"
  ],
  "fields": [
   {
@@ -68,12 +73,39 @@
   {
    "fieldname": "column_break_9yqz2",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Read Only",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "gym_trainer",
+   "fieldtype": "Link",
+   "label": "Gym Trainer",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "section_break_rfzll",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_locker_details",
+   "fieldtype": "Table",
+   "label": "Gym Locker Details",
+   "options": "Locker Details"
+  },
+  {
+   "fieldname": "gym_subscription_details",
+   "fieldtype": "Table",
+   "label": "Gym Subscription Details",
+   "options": "Member Ship Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-03 18:16:53.038721",
+ "modified": "2024-01-04 16:17:35.927344",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
@@ -95,7 +127,16 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Green",
+   "title": "Active"
+  },
+  {
+   "color": "Red",
+   "title": "Occupied"
+  }
+ ],
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1
