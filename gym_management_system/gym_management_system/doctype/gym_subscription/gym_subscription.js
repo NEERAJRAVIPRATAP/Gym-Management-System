@@ -8,13 +8,13 @@ frappe.ui.form.on('Gym Subscription', {
             };
         };
 
-        frm.fields_dict['duration'].get_query = function(doc, cdt, cdn) {
-            return {
-                filters: {
-                    // Add any additional filters if needed
-                }
-            };
-        };
+        // frm.fields_dict['duration'].get_query = function(doc, cdt, cdn) {
+        //     return {
+        //         filters: {
+        //             // Add any additional filters if needed
+        //         }
+        //     };
+        // };
 
         frm.fields_dict.subscription_type.$input.on('change', function() {
             set_subscription_amount(frm);
