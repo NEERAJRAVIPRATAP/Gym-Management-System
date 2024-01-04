@@ -8,18 +8,33 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "locker_no"
+  "locker_no",
+  "locker_owner",
+  "section_break_vnbjm"
  ],
  "fields": [
   {
    "fieldname": "locker_no",
    "fieldtype": "Int",
    "label": "Locker No."
+  },
+  {
+   "fieldname": "locker_owner",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "User",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_vnbjm",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-03 18:15:28.334614",
+ "modified": "2024-01-04 10:14:24.874495",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Locker Data",

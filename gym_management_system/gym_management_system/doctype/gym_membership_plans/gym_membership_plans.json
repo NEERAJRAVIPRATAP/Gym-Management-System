@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:{months} Month@{fee} Rs",
  "creation": "2024-01-03 17:48:18.416659",
  "default_view": "List",
  "doctype": "DocType",
@@ -25,11 +25,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-03 17:48:47.096348",
+ "modified": "2024-01-03 23:31:37.439433",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership Plans",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

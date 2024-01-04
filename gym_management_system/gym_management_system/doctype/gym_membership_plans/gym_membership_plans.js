@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Membership Plans', {
-	// refresh: function(frm) {
-
-	// }
+	refresh: function(frm) {
+			frappe.msgprint("Welcome")
+	}
 });
