@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Trainer-{first_name}-{last_name}-{###}",
+ "creation": "2024-01-03 17:52:49.956401",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "dob",
+  "column_break_9b4ym",
+  "gneder",
+  "email",
+  "age",
+  "section_break_zilwp",
+  "phone_number",
+  "column_break_qtdi2",
+  "qualification",
+  "section_break_1oonn",
+  "trainer_fee",
+  "section_break_m6bug",
+  "user_details"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "bold": 1,
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "bold": 1,
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9b4ym",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "gneder",
+   "fieldtype": "Select",
+   "label": "Gneder",
+   "options": "Male\nFemale"
+  },
+  {
+   "bold": 1,
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "bold": 1,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "bold": 1,
+   "fieldname": "section_break_zilwp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_qtdi2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "qualification",
+   "fieldtype": "Table",
+   "label": "Qualification",
+   "options": "Trainer Qualification"
+  },
+  {
+   "bold": 1,
+   "fieldname": "trainer_fee",
+   "fieldtype": "Table",
+   "label": "Trainer Fee",
+   "options": "Type Of Trainer"
+  },
+  {
+   "fieldname": "section_break_1oonn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user_details",
+   "fieldtype": "Table",
+   "label": "User Details",
+   "options": "Trainer Member List"
+  },
+  {
+   "fieldname": "section_break_m6bug",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-04 10:43:28.800963",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Trainer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

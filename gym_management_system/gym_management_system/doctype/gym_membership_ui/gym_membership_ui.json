@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{register_users}",
+ "creation": "2024-01-03 21:51:23.976009",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "add_membership_section",
+  "register_users",
+  "full_name",
+  "membership_plan",
+  "start_date",
+  "end_date",
+  "column_break_lkfav",
+  "fee",
+  "discount",
+  "final_amount",
+  "status",
+  "section_break_pda3j",
+  "locker_allocate",
+  "column_break_xcy3w",
+  "locker_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "register_users",
+   "fieldtype": "Link",
+   "label": "Registers Member",
+   "options": "User",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Membership plans",
+   "options": "Gym Membership Plans"
+  },
+  {
+   "fieldname": "locker_allocate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Locker Allocate",
+   "options": "Locker Data"
+  },
+  {
+   "fieldname": "column_break_lkfav",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "section_break_pda3j",
+   "fieldtype": "Section Break",
+   "label": "Locker Allocate"
+  },
+  {
+   "fieldname": "add_membership_section",
+   "fieldtype": "Section Break",
+   "label": "Add Membership"
+  },
+  {
+   "fieldname": "column_break_xcy3w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "locker_end_date",
+   "fieldtype": "Date",
+   "label": "Locker End Date"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "label": "Discount given"
+  },
+  {
+   "fieldname": "final_amount",
+   "fieldtype": "Currency",
+   "label": "Final Amount"
+  },
+  {
+   "fieldname": "fee",
+   "fieldtype": "Currency",
+   "label": "Fee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-04 10:42:20.939784",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Membership UI",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

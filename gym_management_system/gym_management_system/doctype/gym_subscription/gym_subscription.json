@@ -17,6 +17,8 @@
   "amended_from",
   "min_amount",
   "max_amount"
+  "gym_member",
+  "gym_trainer"
  ],
  "fields": [
   {
@@ -79,12 +81,22 @@
    "fieldtype": "Currency",
    "label": "Maximum Amount",
    "reqd": 1
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member Name"
+  },
+  {
+   "fieldname": "gym_trainer",
+   "fieldtype": "Link",
+   "label": "Gym Trainer",
+   "options": "Gym Trainer"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-03 22:34:06.181087",
+ "modified": "2024-01-03 22:03:22.817741",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",
