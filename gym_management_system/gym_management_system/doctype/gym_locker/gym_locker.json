@@ -10,15 +10,19 @@
   "locker_id",
   "start_date",
   "end_date",
-  "gym_subscription",
   "gym_member",
-  "status"
+  "status",
+  "locker_type",
+  "locker_fee"
  ],
  "fields": [
   {
    "fieldname": "locker_id",
-   "fieldtype": "Int",
-   "label": "Locker Id"
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Locker Id",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "start_date",
@@ -31,12 +35,6 @@
    "label": "End Date"
   },
   {
-   "fieldname": "gym_subscription",
-   "fieldtype": "Link",
-   "label": "Gym Subscription",
-   "options": "Gym Subscription"
-  },
-  {
    "fieldname": "gym_member",
    "fieldtype": "Link",
    "label": "Gym Member",
@@ -46,12 +44,23 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nAssigned\nExpired"
+   "options": "\nAvailable\nOccupied"
+  },
+  {
+   "fieldname": "locker_type",
+   "fieldtype": "Select",
+   "label": "Locker Type",
+   "options": "\nSmall\nMedium\nLarge"
+  },
+  {
+   "fieldname": "locker_fee",
+   "fieldtype": "Currency",
+   "label": "Locker Fee"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-03 22:00:03.608225",
+ "modified": "2024-01-05 12:44:51.050979",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Locker",
