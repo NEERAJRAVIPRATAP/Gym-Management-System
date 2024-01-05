@@ -22,5 +22,6 @@ frappe.ui.form.on('Gym Member Name', {
 			frm.set_value("full_name",frm.doc.first_name+" "+frm.doc.middle_name+" "+frm.doc.last_name)
 		}
 	  	
-	}
+	},
+
 });

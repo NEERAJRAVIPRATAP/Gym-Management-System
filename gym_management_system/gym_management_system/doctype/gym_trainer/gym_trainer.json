@@ -8,21 +8,24 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "zym_trainer_section",
   "first_name",
   "last_name",
   "dob",
   "column_break_9b4ym",
   "gneder",
   "email",
+  "phone_number",
   "age",
   "section_break_zilwp",
-  "phone_number",
-  "column_break_qtdi2",
+  "qualification_and_experience_section",
   "higher_qualification",
   "experience",
-  "certification",
+  "column_break_fyn9l",
   "previous_work",
-  "section_break_1oonn",
+  "certification",
+  "section_break_dpsme",
+  "specialization_section",
   "zumba",
   "zumba_fee",
   "yoga",
@@ -33,7 +36,9 @@
   "crdio_fee",
   "weight_lifting",
   "weight_lifting_fee",
+  "total",
   "section_break_aqjzg",
+  "member_list_section",
   "user_details"
  ],
  "fields": [
@@ -89,14 +94,6 @@
    "fieldname": "phone_number",
    "fieldtype": "Phone",
    "label": "Phone Number"
-  },
-  {
-   "fieldname": "column_break_qtdi2",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_1oonn",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "user_details",
@@ -192,12 +189,46 @@
   {
    "fieldname": "section_break_aqjzg",
    "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "label": "Total"
+  },
+  {
+   "fieldname": "zym_trainer_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "column_break_fyn9l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dpsme",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "qualification_and_experience_section",
+   "fieldtype": "Section Break",
+   "label": "Qualification and Experience"
+  },
+  {
+   "fieldname": "specialization_section",
+   "fieldtype": "Section Break",
+   "label": "Specialization"
+  },
+  {
+   "fieldname": "member_list_section",
+   "fieldtype": "Section Break",
+   "label": "Member List"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 13:56:24.136808",
+ "modified": "2024-01-05 00:24:59.828099",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Trainer",
