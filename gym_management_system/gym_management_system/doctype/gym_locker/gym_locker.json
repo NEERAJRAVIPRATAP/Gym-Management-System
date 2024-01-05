@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:locker_id",
  "creation": "2024-01-03 21:22:36.872467",
  "default_view": "List",
  "doctype": "DocType",
@@ -61,11 +60,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 19:24:24.679303",
+ "modified": "2024-01-05 12:44:51.050979",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Locker",
- "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
