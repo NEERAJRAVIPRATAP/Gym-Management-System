@@ -21,7 +21,8 @@
   "section_break_rfzll",
   "gym_trainer",
   "gym_locker_details",
-  "gym_subscription_details"
+  "gym_subscription_details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -100,31 +101,29 @@
    "fieldtype": "Table",
    "label": "Gym Subscription Details",
    "options": "Member Ship Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Member Name",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
+ "istable": 1,
  "links": [],
- "modified": "2024-01-04 16:17:35.927344",
+ "modified": "2024-01-05 12:54:05.206536",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [

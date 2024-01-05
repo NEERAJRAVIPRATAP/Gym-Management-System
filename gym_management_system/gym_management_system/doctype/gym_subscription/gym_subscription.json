@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "GS.-.YYYY.-.####",
+ "autoname": "format:GS-{YYYY}-{duration_subscription}",
  "creation": "2024-01-03 18:02:51.926857",
  "default_view": "List",
  "doctype": "DocType",
@@ -12,15 +12,14 @@
   "amount_01",
   "duration_subscription",
   "section_break_fobqm",
-  "amended_from",
-  "gym_trainer"
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "amount_01",
    "fieldtype": "Select",
    "label": "Amount",
-   "options": "Weight-Lifting :- Rs.2000\nZumba :- Rs.3000\nYoga :- Rs.5000\nCross-Fit :- Rs.4000\nCardio :- Rs.5000\nStrength-Fitness :- Rs.3500",
+   "options": "Rs.2000 :- Weight-Lifting\nRs.3000 :- Zumba\nRs.5000:- Yoga\nRs.4000 :- Cross-Fit\nRs.5000 :-Cardio\nRs.3500 :- Strength-Fitness",
    "reqd": 1
   },
   {
@@ -46,31 +45,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "min_amount",
-   "fieldtype": "Currency",
-   "label": "Minimum Amount",
-   "reqd": 1
-  },
-  {
-   "fieldname": "max_amount",
-   "fieldtype": "Currency",
-   "label": "Maximum Amount",
-   "reqd": 1
-  },
-   {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",  
-   "options": "Gym Member Name"
-  },
-  {
-
-   "fieldname": "gym_trainer",
-   "fieldtype": "Link",
-   "label": "Gym Trainer",
-   "options": "Gym Trainer"
-  },
-  {
    "fieldname": "member_assign",
    "fieldtype": "Link",
    "label": "Member Assign Subscription",
@@ -79,11 +53,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 18:06:06.857755",
+ "modified": "2024-01-05 17:24:41.147359",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
