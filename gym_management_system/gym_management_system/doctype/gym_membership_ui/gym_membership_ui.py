@@ -11,8 +11,10 @@ import frappe
 
 @frappe.whitelist()
 def get_username_from_email(user_doc):
-    username = frappe.get_value("Gym Member Name", {"name": user_doc}, "first_name", 'last_name' )
-    return username
+    username = frappe.get_value("Gym Member Name", {"name": user_doc}, "first_name" )
+    ea = frappe.get_value("Gym Member Name", {"name": user_doc}, 'email_address' )
+    ct = frappe.get_value("Gym Member Name", {"name": user_doc}, 'contact' )
+    return username, ea ,ct
 
 @frappe.whitelist()
 def snow(abc, xyz):
@@ -24,5 +26,12 @@ def snow(abc, xyz):
         return 1
     else:
         return 0
+    
+@frappe.whitelist()
+def show(llll):
+    doc = frappe.get_doc('Gym Subscription', llll)
+    x = doc.duration_subscription
+    y = doc.max_amount
+    return x
 
 
