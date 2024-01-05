@@ -17,8 +17,25 @@ frappe.ui.form.on('Gym Trainer', {
     },
     weight_lifting: function(frm) {
         updateTotal(frm);
-    }
-    
+    },
+
+
+    before_save: function(frm){
+        var doc_name = frm.doc.name
+        console.log(doc_name)
+        frappe.call({
+            method: 'gym_management_system.gym_management_system.doctype.gym_trainer.gym_trainer.Set_Memeber_list',
+            args: {
+                abc: doc_name,
+
+            },
+            callback: function(response) {
+                console.log(response)
+            }
+
+        })
+}
+
    
 });
 
