@@ -19,7 +19,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Locker No.",
-   "options": "Gym Locker"
+   "options": "Locker Details"
   },
   {
    "fieldname": "locker_member",
@@ -46,7 +46,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-04 18:16:05.898618",
+ "modified": "2024-01-05 10:12:20.406894",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Locker child in membership",

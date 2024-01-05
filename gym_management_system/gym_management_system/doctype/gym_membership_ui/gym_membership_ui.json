@@ -14,11 +14,12 @@
   "full_name",
   "section_break_zxybq",
   "membership_plan",
+  "column_break_ndx6e",
+  "subscription_type",
   "column_break_lkfav",
   "start_date",
   "column_break_cusvf",
   "end_date",
-  "column_break_uyhz1",
   "section_break_pda3j",
   "trainer_allocated",
   "locker_allocate_section",
@@ -28,10 +29,12 @@
   "column_break_3voan",
   "locker_amount",
   "column_break_kcean",
+  "trainer_fee_amount",
   "discount",
   "payment_method",
   "grand_total",
-  "amended_from"
+  "amended_from",
+  "status"
  ],
  "fields": [
   {
@@ -44,9 +47,9 @@
   },
   {
    "fieldname": "membership_plan",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Subscription plans"
+   "label": "Subscription Plan"
   },
   {
    "fieldname": "column_break_lkfav",
@@ -84,7 +87,7 @@
   {
    "fieldname": "discount",
    "fieldtype": "Percent",
-   "label": "Discount %"
+   "label": "Discount % ( on Fee Amount ))"
   },
   {
    "fieldname": "fee",
@@ -117,10 +120,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_uyhz1",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_zxybq",
    "fieldtype": "Section Break"
   },
@@ -138,7 +137,7 @@
   {
    "fieldname": "bill",
    "fieldtype": "Section Break",
-   "label": "Billing"
+   "label": "Final Amount"
   },
   {
    "fieldname": "amended_from",
@@ -162,12 +161,31 @@
   {
    "fieldname": "column_break_kcean",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ndx6e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_type",
+   "fieldtype": "Data",
+   "label": "Subscription Type"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "trainer_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Trainer Fee Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 18:33:12.504041",
+ "modified": "2024-01-05 10:22:21.295218",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",

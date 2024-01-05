@@ -3,7 +3,8 @@
 
 import frappe
 from frappe.model.document import Document
-
+class GymSubscription(Document):
+	pass
 
 @frappe.whitelist()
 def get_subscription_info(subscription_type):
