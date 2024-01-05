@@ -39,7 +39,7 @@
   "total",
   "section_break_aqjzg",
   "member_list_section",
-  "user_details"
+  "member_details"
  ],
  "fields": [
   {
@@ -94,12 +94,6 @@
    "fieldname": "phone_number",
    "fieldtype": "Phone",
    "label": "Phone Number"
-  },
-  {
-   "fieldname": "user_details",
-   "fieldtype": "Table",
-   "label": "Member List",
-   "options": "Trainer Member List"
   },
   {
    "fieldname": "higher_qualification",
@@ -223,12 +217,18 @@
    "fieldname": "member_list_section",
    "fieldtype": "Section Break",
    "label": "Member List"
+  },
+  {
+   "fieldname": "member_details",
+   "fieldtype": "Table",
+   "label": "Member List",
+   "options": "Trainer Member List"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-05 00:24:59.828099",
+ "modified": "2024-01-05 18:01:19.818606",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Trainer",
