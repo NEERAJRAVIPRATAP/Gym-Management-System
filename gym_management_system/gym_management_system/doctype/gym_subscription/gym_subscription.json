@@ -8,32 +8,20 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "subscription_type",
+  "member_assign",
   "amount_01",
   "duration_subscription",
   "section_break_fobqm",
-  "start_date",
-  "end_date",
   "amended_from",
-  "min_amount",
-  "max_amount",
-  "gym_member",
   "gym_trainer"
  ],
  "fields": [
   {
-   "fieldname": "subscription_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Subscription Type",
-   "options": "Weight-Lifting\nZumba\nYoga\nCross-Fit\nCardio\nStrength-Fitness\nYoga",
-   "reqd": 1
-  },
-  {
    "fieldname": "amount_01",
    "fieldtype": "Select",
    "label": "Amount",
-   "options": "Weight-Lifting :- Rs.2000\nZumba :- Rs.3000\nYoga :- Rs.5000\nCross-Fit :- Rs.4000\nCardio :- Rs.5000\nStrength-Fitness :- Rs.3500"
+   "options": "Weight-Lifting :- Rs.2000\nZumba :- Rs.3000\nYoga :- Rs.5000\nCross-Fit :- Rs.4000\nCardio :- Rs.5000\nStrength-Fitness :- Rs.3500",
+   "reqd": 1
   },
   {
    "fieldname": "duration_subscription",
@@ -76,16 +64,22 @@
    "options": "Gym Member Name"
   },
   {
+
    "fieldname": "gym_trainer",
    "fieldtype": "Link",
    "label": "Gym Trainer",
    "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "member_assign",
+   "fieldtype": "Link",
+   "label": "Member Assign Subscription",
+   "options": "Gym Member Name"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 12:53:07.104817",
+ "modified": "2024-01-04 18:06:06.857755",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",

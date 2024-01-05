@@ -1,3 +1,8 @@
+
+frappe.ui.form.on('Gym Subscription', {
+    // refresh: function(frm) {
+	// }
+})
 // frappe.ui.form.on('Gym Subscription', {
 //     refresh: function(frm) {
 //         frm.fields_dict['subscription_type'].get_query = function(doc, cdt, cdn) {
