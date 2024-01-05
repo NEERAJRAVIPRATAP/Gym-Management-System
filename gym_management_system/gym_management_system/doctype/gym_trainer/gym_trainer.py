@@ -18,6 +18,8 @@ class GymTrainer(Document):
 
 
 	
-
+# @frappe.whitelist()
+# def Member_Details():
+# 	pass
 
 
