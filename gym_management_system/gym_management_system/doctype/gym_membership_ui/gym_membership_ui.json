@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{register_users}",
+ "autoname": "format:Membership-{register_users}",
  "creation": "2024-01-03 21:51:23.976009",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,24 +10,25 @@
  "field_order": [
   "add_membership_section",
   "register_users",
-  "column_break_ehioj",
   "full_name",
+  "column_break_ehioj",
+  "email_id",
+  "phone_no",
   "section_break_zxybq",
-  "membership_plan",
-  "column_break_lkfav",
-  "start_date",
-  "column_break_cusvf",
-  "end_date",
-  "column_break_uyhz1",
+  "member_subscription_details",
   "section_break_pda3j",
   "trainer_allocated",
   "locker_allocate_section",
   "locker_allocated",
   "bill",
   "fee",
+  "column_break_vqeue",
+  "locker_fee",
+  "column_break_jdoae",
   "discount",
   "payment_method",
-  "grand_total"
+  "grand_total",
+  "amended_from"
  ],
  "fields": [
   {
@@ -39,33 +40,12 @@
    "unique": 1
   },
   {
-   "fieldname": "membership_plan",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Subscription plans"
-  },
-  {
-   "fieldname": "column_break_lkfav",
-   "fieldtype": "Column Break",
-   "hidden": 1
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Plan Start Date"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Plan End Date"
-  },
-  {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Full Name"
+   "label": "Full Name",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_pda3j",
@@ -85,7 +65,7 @@
   {
    "fieldname": "fee",
    "fieldtype": "Currency",
-   "label": "Fee Amount"
+   "label": "Subscription Fee"
   },
   {
    "fieldname": "grand_total",
@@ -93,6 +73,7 @@
    "label": "Grand Total"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "trainer_allocated",
    "fieldtype": "Table",
    "label": "Trainer_allocated",
@@ -109,18 +90,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_cusvf",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_uyhz1",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_zxybq",
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "locker_allocated",
    "fieldtype": "Table",
    "label": "Locker allocate",
@@ -135,11 +109,54 @@
    "fieldname": "bill",
    "fieldtype": "Section Break",
    "label": "Billing"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "member_subscription_details",
+   "fieldtype": "Table",
+   "label": "Member Subscription Details",
+   "options": "Member child in membership"
+  },
+  {
+   "fieldname": "column_break_vqeue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "locker_fee",
+   "fieldtype": "Currency",
+   "label": "Locker fee"
+  },
+  {
+   "fieldname": "column_break_jdoae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership UI",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 16:11:42.903573",
+ "modified": "2024-01-05 18:51:06.199547",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",
