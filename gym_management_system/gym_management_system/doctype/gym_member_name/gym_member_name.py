@@ -4,10 +4,30 @@
 import frappe
 from frappe.model.document import Document
 
-
 class GymMemberName(Document):
+    pass
+@frappe.whitelist()
+def new_document(msg):
+   return "Hi this message from frappe_call"
+   
+   
+   
+   ''' doc = frappe.new_doc('Gym Trainer')
+    doc.append("member_details",
+                   {
+                       "member_email": email_address,
+                       "member_phone": contact
+                   })
+    
+    doc.insert()'''
 
-    doc=frappe.get_doc("Gym Trainer","")
+
+
+       
+
+
+
+
 
 
 

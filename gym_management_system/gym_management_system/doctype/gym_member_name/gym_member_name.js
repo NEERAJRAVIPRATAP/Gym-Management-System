@@ -6,28 +6,17 @@ frappe.ui.form.on('Gym Member Name', {
 
 	validate: function (frm)
 	{
-		if (frm.doc.middle_name == null)
-		{
-			frm.set_value("full_name",frm.doc.first_name+" "+frm.doc.last_name)
-		}
-		else if (frm.doc.last_name == null)
-		{
-			frm.set_value("full_name",frm.doc.first_name+" "+frm.doc.middle_name)
-		}
-		else if (frm.doc.middle_name == null && frm.doc.last_name == null)
-		{
-			frm.set_value("full_name",frm.doc.first_name)
-		}
-		else {
-			frm.set_value("full_name",frm.doc.first_name+" "+frm.doc.middle_name+" "+frm.doc.last_name)
-		}
-	  	
+		
+	   frm.set_value("full_name",frm.doc.first_name+" "+frm.doc.last_name) 	
 	},
-	/*before_save: function (frm) {
+	before_submit: function (frm) {
         
-		frm.call({
+		frappe.call({
 			
-			method: "send_email_notification",
+			method: "gym_management_system.gym_management_system.doctype.gym_member_name.gym_member_name.new_document",
+			args: {
+				msg:"hi "
+			},
 			
 			callback: function (r) {
 				if (r.message) {
@@ -36,8 +25,8 @@ frappe.ui.form.on('Gym Member Name', {
 			}
 		})
 
-	},
-
+	}
+/*
 
 	before_save: function (frm)
 	{

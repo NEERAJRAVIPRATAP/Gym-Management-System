@@ -10,7 +10,6 @@
   "id",
   "statrt_date",
   "end_date",
-  "gym_member",
   "status"
  ],
  "fields": [
@@ -18,8 +17,7 @@
    "fieldname": "id",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": " Locker Id",
-   "reqd": 1
+   "label": " Locker Id"
   },
   {
    "fieldname": "statrt_date",
@@ -38,15 +36,6 @@
    "label": "End Date"
   },
   {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
-   "label": "Gym Member",
-   "options": "Gym Member Name"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -59,7 +48,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-04 19:20:08.641410",
+ "modified": "2024-01-07 00:22:52.705131",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Locker Details",

@@ -34,7 +34,7 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Registers Member",
+   "label": "Registered Member",
    "options": "Gym Member Name"
   },
   {
@@ -93,7 +93,7 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Locker Allocate",
-   "options": "Locker Data"
+   "options": "Gym Locker"
   },
   {
    "fieldname": "locker_end_date",
@@ -111,7 +111,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-04 18:55:23.741665",
+ "modified": "2024-01-07 00:27:13.157966",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Member Ship Details",

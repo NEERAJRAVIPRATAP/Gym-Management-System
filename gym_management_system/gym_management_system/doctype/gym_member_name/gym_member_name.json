@@ -9,7 +9,6 @@
  "engine": "InnoDB",
  "field_order": [
   "first_name",
-  "middle_name",
   "last_name",
   "dob",
   "full_name",
@@ -21,20 +20,15 @@
   "section_break_rfzll",
   "gym_trainer",
   "gym_locker_details",
-  "gym_subscription_details"
+  "gym_subscription_details",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "First Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "middle_name",
-   "fieldtype": "Data",
-   "label": "Middle Name"
+   "label": "First Name"
   },
   {
    "fieldname": "last_name",
@@ -67,8 +61,7 @@
    "fieldname": "contact",
    "fieldtype": "Phone",
    "in_list_view": 1,
-   "label": "Contact",
-   "reqd": 1
+   "label": "Contact"
   },
   {
    "fieldname": "column_break_9yqz2",
@@ -103,12 +96,22 @@
    "fieldtype": "Table",
    "label": "Gym Subscription Details",
    "options": "Member Ship Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Member Name",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-05 16:53:28.314866",
+ "modified": "2024-01-07 00:40:59.717542",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
