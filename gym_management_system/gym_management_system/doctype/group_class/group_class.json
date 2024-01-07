@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "GM.-.CL.-.####",
  "creation": "2024-01-04 13:51:00.229138",
@@ -13,7 +14,7 @@
   "start_time",
   "end_time",
   "amended_from",
-  "gym_member_class"
+  "full_name"
  ],
  "fields": [
   {
@@ -55,7 +56,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "gym_member_class",
+   "fieldname": "full_name",
    "fieldtype": "Table",
    "label": "Gym Member Name",
    "options": "Gym Member Name"
@@ -64,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-05 16:21:42.902538",
+ "modified": "2024-01-07 11:09:40.074927",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Group Class",
