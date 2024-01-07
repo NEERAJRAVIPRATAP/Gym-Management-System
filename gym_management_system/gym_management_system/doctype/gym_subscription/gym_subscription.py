@@ -8,7 +8,7 @@ class GymSubscription(Document):
 
      pass
 
-	pass
+	
 
 
 	
