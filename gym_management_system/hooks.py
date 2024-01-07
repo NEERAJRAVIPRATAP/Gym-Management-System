@@ -127,13 +127,13 @@ app_license = "wkndwk"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"gym_management_system.tasks.all"
 # 	],
-# 	"daily": [
-# 		"gym_management_system.tasks.daily"
-# 	],
+	"daily": [
+		"gym_management_system.gym_management_system.doctype.gym_locker.gym_locker.schedular"
+	],
 # 	"hourly": [
 # 		"gym_management_system.tasks.hourly"
 # 	],
@@ -143,7 +143,7 @@ app_license = "wkndwk"
 # 	"monthly": [
 # 		"gym_management_system.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
