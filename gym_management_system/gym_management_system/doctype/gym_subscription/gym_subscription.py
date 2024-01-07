@@ -8,6 +8,7 @@ from frappe.model.document import Document
 
 class TestGymSubscription(Document):
 	pass
+	
 
 @frappe.whitelist()
 def get_subscription_info(subscription_type):

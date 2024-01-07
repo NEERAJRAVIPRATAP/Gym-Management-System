@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{first_name}-{last_name}-.{####}",
+ "autoname": "format:member-{first_name}-{last_name}-.{####}",
  "creation": "2024-01-03 18:15:41.023790",
  "default_view": "List",
  "doctype": "DocType",
@@ -80,6 +80,7 @@
    "label": "Full Name"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "gym_trainer",
    "fieldtype": "Link",
    "label": "Gym Trainer",
@@ -90,12 +91,14 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "gym_locker_details",
    "fieldtype": "Table",
    "label": "Gym Locker Details",
    "options": "Locker Details"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "gym_subscription_details",
    "fieldtype": "Table",
    "label": "Gym Subscription Details",
@@ -105,7 +108,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 16:17:35.927344",
+ "modified": "2024-01-05 16:53:28.314866",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
