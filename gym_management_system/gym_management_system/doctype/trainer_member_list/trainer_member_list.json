@@ -6,21 +6,29 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "user_name",
-  "user_email",
-  "user_phone"
+  "member_name",
+  "member_full_name",
+  "member_email",
+  "member_phone",
+  "member_trainer"
  ],
  "fields": [
   {
    "bold": 1,
-   "fieldname": "user_name",
-   "fieldtype": "Data",
+   "fieldname": "member_name",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Member Name"
+   "label": "Memeber Name",
+   "options": "Gym Member Name"
+  },
+  {
+   "fieldname": "member_full_name",
+   "fieldtype": "Data",
+   "label": "Member Full Name"
   },
   {
    "bold": 1,
-   "fieldname": "user_email",
+   "fieldname": "member_email",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Member Email",
@@ -28,16 +36,23 @@
   },
   {
    "bold": 1,
-   "fieldname": "user_phone",
+   "fieldname": "member_phone",
    "fieldtype": "Phone",
    "in_list_view": 1,
    "label": "Member Phone"
+  },
+  {
+   "bold": 1,
+   "fieldname": "member_trainer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Trainer"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-04 15:42:07.723345",
+ "modified": "2024-01-05 17:38:42.020428",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Trainer Member List",

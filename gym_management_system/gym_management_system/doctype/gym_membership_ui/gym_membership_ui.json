@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{register_users}",
+ "autoname": "format:Membership-{register_users}-{###}",
  "creation": "2024-01-03 21:51:23.976009",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,24 +10,26 @@
  "field_order": [
   "add_membership_section",
   "register_users",
+  "email_id",
   "column_break_ehioj",
   "full_name",
+  "phone_no",
   "section_break_zxybq",
-  "membership_plan",
-  "column_break_lkfav",
-  "start_date",
-  "column_break_cusvf",
-  "end_date",
-  "column_break_uyhz1",
+  "member_subscription_details",
   "section_break_pda3j",
   "trainer_allocated",
   "locker_allocate_section",
   "locker_allocated",
   "bill",
   "fee",
+  "column_break_vqeue",
+  "locker_fee",
+  "d_locker_fee",
+  "column_break_qhziy",
   "discount",
   "payment_method",
-  "grand_total"
+  "grand_total",
+  "amended_from"
  ],
  "fields": [
   {
@@ -36,36 +38,17 @@
    "label": "Registers Member",
    "options": "Gym Member Name",
    "reqd": 1,
+   "set_only_once": 1,
    "unique": 1
   },
   {
-   "fieldname": "membership_plan",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Subscription plans"
-  },
-  {
-   "fieldname": "column_break_lkfav",
-   "fieldtype": "Column Break",
-   "hidden": 1
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Plan Start Date"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Plan End Date"
-  },
-  {
+   "fetch_from": "register_users.first_name",
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Full Name"
+   "label": "Full Name",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_pda3j",
@@ -78,21 +61,27 @@
    "label": "Add Membership"
   },
   {
+   "default": "0.00",
    "fieldname": "discount",
    "fieldtype": "Percent",
    "label": "Discount %"
   },
   {
+   "bold": 1,
+   "default": "0.00",
    "fieldname": "fee",
    "fieldtype": "Currency",
-   "label": "Fee Amount"
+   "label": "Subscription Fee"
   },
   {
+   "bold": 1,
    "fieldname": "grand_total",
    "fieldtype": "Currency",
+   "is_virtual": 1,
    "label": "Grand Total"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "trainer_allocated",
    "fieldtype": "Table",
    "label": "Trainer_allocated",
@@ -109,18 +98,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_cusvf",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_uyhz1",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_zxybq",
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "locker_allocated",
    "fieldtype": "Table",
    "label": "Locker allocate",
@@ -135,11 +117,64 @@
    "fieldname": "bill",
    "fieldtype": "Section Break",
    "label": "Billing"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "member_subscription_details",
+   "fieldtype": "Table",
+   "label": "Member Subscription Details",
+   "options": "Member child in membership"
+  },
+  {
+   "fieldname": "column_break_vqeue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "0.00",
+   "fieldname": "locker_fee",
+   "fieldtype": "Currency",
+   "label": "Locker fee"
+  },
+  {
+   "fetch_from": "register_users.email_address",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "register_users.contact",
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership UI",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_qhziy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "d_locker_fee",
+   "fieldtype": "Check",
+   "label": "Discount on Locker Fee"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 16:11:42.903573",
+ "modified": "2024-01-07 20:17:50.875944",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",

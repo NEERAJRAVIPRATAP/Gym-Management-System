@@ -7,27 +7,29 @@
  "engine": "InnoDB",
  "field_order": [
   "trainer_name",
+  "ttrainer_nam",
   "training_type",
   "start_date",
-  "end_date",
-  "trainer_member_fee"
+  "end_date"
  ],
  "fields": [
   {
    "fieldname": "trainer_name",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Name",
-   "options": "Gym Trainer"
+   "label": "Trainer ID",
+   "options": "Gym Trainer",
+   "reqd": 1
   },
   {
    "fieldname": "training_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Training Type",
-   "options": "Zumba\nWeight Lifting\nStretching\nBoxing"
+   "options": "Zumba\nWeight Lifting\nStretching\nCardio\nBoxing"
   },
   {
+   "default": "Now",
    "fieldname": "start_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -40,16 +42,18 @@
    "label": "End Date"
   },
   {
-   "fieldname": "trainer_member_fee",
-   "fieldtype": "Currency",
+   "fetch_from": "trainer_name.first_name",
+   "fieldname": "ttrainer_nam",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Fee"
+   "label": "Trainer Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-04 15:52:05.007497",
+ "modified": "2024-01-07 17:17:48.672960",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Trainer child  in membership",

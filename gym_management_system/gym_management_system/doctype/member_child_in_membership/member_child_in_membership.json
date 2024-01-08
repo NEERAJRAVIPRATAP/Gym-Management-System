@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-05 12:40:22.440375",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subscription_type",
+  "start_date",
+  "end_date",
+  "amount",
+  "total_subscription_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "subscription_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subscription Type",
+   "options": "Gym Subscription",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_subscription_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Total Subscription Amount "
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Amount / month"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-07 17:22:59.904755",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Member child in membership",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
