@@ -1,4 +1,4 @@
-// // Copyright (c) 2024, Nestorbird_Trainee_Team and contributors
+// Copyright (c) 2024, Nestorbird_Trainee_Team and contributors
 // // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Trainer', {
@@ -36,6 +36,7 @@ frappe.ui.form.on('Gym Trainer', {
             },
         });
 }
+
 });
 function updateTotal(frm) {
     var total = 0;
@@ -55,4 +56,4 @@ function updateTotal(frm) {
         total += frm.doc.weight_lifting_fee;
     }
     frm.set_value('total', total);
-}
+
