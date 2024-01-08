@@ -12,7 +12,8 @@
   "amount_01",
   "duration_subscription",
   "section_break_fobqm",
-  "amended_from"
+  "amended_from",
+  "member_name"
  ],
  "fields": [
   {
@@ -49,11 +50,17 @@
    "fieldtype": "Link",
    "label": "Member Assign Subscription",
    "options": "Gym Member Name"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "label": "Member Name",
+   "options": "Gym Member Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-05 17:24:41.147359",
+ "modified": "2024-01-08 11:19:57.024935",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",
