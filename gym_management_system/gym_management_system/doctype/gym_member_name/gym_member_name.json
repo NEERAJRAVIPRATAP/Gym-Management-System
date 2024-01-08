@@ -20,8 +20,13 @@
   "contact",
   "section_break_rfzll",
   "gym_trainer",
-  "gym_locker_details",
+  "fold_detals",
+  "section_break_e2ism",
+  "gym_subscription",
   "gym_subscription_details",
+  "section_break_6s0cz",
+  "gym_locker",
+  "gym_locker_details",
   "amended_from"
  ],
  "fields": [
@@ -99,6 +104,28 @@
    "options": "Member Ship Details"
   },
   {
+   "fieldname": "fold_detals",
+   "fieldtype": "Fold"
+  },
+  {
+   "fieldname": "section_break_e2ism",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_locker",
+   "fieldtype": "Heading",
+   "label": "Gym Locker "
+  },
+  {
+   "fieldname": "section_break_6s0cz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_subscription",
+   "fieldtype": "Heading",
+   "label": "Gym Subscription "
+  },
+  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -112,7 +139,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-08 00:16:16.861492",
+ "modified": "2024-01-08 12:31:40.569537",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
