@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "GM.-.CL.-.####",
  "creation": "2024-01-04 13:51:00.229138",
@@ -9,11 +10,11 @@
  "engine": "InnoDB",
  "field_order": [
   "member_trainer",
-  "subscription_type",
+  "class_type",
   "start_time",
   "end_time",
-  "gym_member",
-  "amended_from"
+  "amended_from",
+  "full_name"
  ],
  "fields": [
   {
@@ -25,30 +26,16 @@
    "reqd": 1
   },
   {
-   "fieldname": "subscription_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Class type",
-   "options": "Weight-Lifting\nZumba\nYoga\nCross-Fit\nCardio\nStrength-Fitness\nYoga",
-   "reqd": 1
-  },
-  {
    "fieldname": "start_time",
    "fieldtype": "Datetime",
-   "label": "Start Time"
+   "label": "Start Time",
+   "reqd": 1
   },
   {
    "fieldname": "end_time",
    "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "End Time",
-   "reqd": 1
-  },
-  {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member Name"
+   "label": "End Time"
   },
   {
    "fieldname": "amended_from",
@@ -59,12 +46,26 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class type",
+   "options": "Weight-Lifting\nZumba\nYoga\nCross-Fit\nCardio\nStrength-Fitness\nYoga",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Table",
+   "label": "Gym Member Name",
+   "options": "Gym Member Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-04 13:55:21.678333",
+ "modified": "2024-01-07 11:09:40.074927",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Group Class",
