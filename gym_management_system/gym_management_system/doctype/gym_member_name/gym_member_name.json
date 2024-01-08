@@ -111,21 +111,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "istable": 1,
  "links": [],
-<<<<<<< HEAD
- "modified": "2024-01-05 12:54:05.206536",
-=======
- "modified": "2024-01-08 00:16:16.861492",
->>>>>>> 064b5692afef85bfc64d05d29bd70a5dc7f78a0c
+ "modified": "2024-01-08 15:30:14.741012",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
-<<<<<<< HEAD
- "permissions": [],
-=======
  "permissions": [
   {
    "create": 1,
@@ -142,7 +134,6 @@
  ],
  "sender_field": "email_address",
  "sender_name_field": "full_name",
->>>>>>> 064b5692afef85bfc64d05d29bd70a5dc7f78a0c
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

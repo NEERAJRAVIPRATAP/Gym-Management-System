@@ -1,4 +1,4 @@
-// // Copyright (c) 2024, Nestorbird_Trainee_Team and contributors
+// Copyright (c) 2024, Nestorbird_Trainee_Team and contributors
 // // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Trainer', {
@@ -21,9 +21,9 @@ frappe.ui.form.on('Gym Trainer', {
 
     after_save: function(frm){
         var doc_first_name = frm.doc.first_name;
- 
- 
-    before_save: function(frm){
+
+
+        
         var doc_name = frm.doc.name
         console.log(doc_name);
         console.log(doc_first_name);
@@ -42,7 +42,7 @@ frappe.ui.form.on('Gym Trainer', {
         });
 }
 
-   
+
 });
 
 
@@ -67,3 +67,4 @@ function updateTotal(frm) {
 
     frm.set_value('total', total);
 }
+
