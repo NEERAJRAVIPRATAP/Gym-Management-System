@@ -19,9 +19,11 @@ frappe.ui.form.on('Gym Trainer', {
         updateTotal(frm);
     },
 
-
     after_save: function(frm){
         var doc_first_name = frm.doc.first_name;
+ 
+ 
+    before_save: function(frm){
         var doc_name = frm.doc.name
         console.log(doc_name);
         console.log(doc_first_name);
