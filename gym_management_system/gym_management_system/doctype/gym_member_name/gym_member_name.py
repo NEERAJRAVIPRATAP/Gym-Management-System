@@ -16,11 +16,11 @@ class GymMemberName(Document):
                        "member_phone":doc.contact
                    })
         gym_trainer.save()
-        a=frappe.get_doc("Gym Member Name",doc.name)
-        print(gym_trainer.name)
-        a.gym_trainer=gym_trainer.name
-        print(a,"========")
-        a.save()
+        # a=frappe.get_doc("Gym Member Name",doc.name)
+        # print(gym_trainer.name)
+        # a.gym_trainer=gym_trainer.name
+        # print(a,"========")
+        # a.save()
 
        
 
