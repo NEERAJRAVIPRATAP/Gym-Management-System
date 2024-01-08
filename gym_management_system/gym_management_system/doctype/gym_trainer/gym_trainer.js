@@ -18,8 +18,8 @@ frappe.ui.form.on('Gym Trainer', {
     weight_lifting: function(frm) {
         updateTotal(frm);
     },
-
-
+ 
+ 
     before_save: function(frm){
         var doc_name = frm.doc.name
         console.log(doc_name)

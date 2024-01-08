@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Membership-{register_users}",
+ "autoname": "format:Membership-{register_users}-{###}",
  "creation": "2024-01-03 21:51:23.976009",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,9 +10,9 @@
  "field_order": [
   "add_membership_section",
   "register_users",
-  "full_name",
-  "column_break_ehioj",
   "email_id",
+  "column_break_ehioj",
+  "full_name",
   "phone_no",
   "section_break_zxybq",
   "member_subscription_details",
@@ -24,7 +24,8 @@
   "fee",
   "column_break_vqeue",
   "locker_fee",
-  "column_break_jdoae",
+  "d_locker_fee",
+  "column_break_qhziy",
   "discount",
   "payment_method",
   "grand_total",
@@ -37,9 +38,11 @@
    "label": "Registers Member",
    "options": "Gym Member Name",
    "reqd": 1,
+   "set_only_once": 1,
    "unique": 1
   },
   {
+   "fetch_from": "register_users.first_name",
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -58,18 +61,23 @@
    "label": "Add Membership"
   },
   {
+   "default": "0.00",
    "fieldname": "discount",
    "fieldtype": "Percent",
    "label": "Discount %"
   },
   {
+   "bold": 1,
+   "default": "0.00",
    "fieldname": "fee",
    "fieldtype": "Currency",
    "label": "Subscription Fee"
   },
   {
+   "bold": 1,
    "fieldname": "grand_total",
    "fieldtype": "Currency",
+   "is_virtual": 1,
    "label": "Grand Total"
   },
   {
@@ -122,25 +130,25 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
+   "default": "0.00",
    "fieldname": "locker_fee",
    "fieldtype": "Currency",
    "label": "Locker fee"
   },
   {
-   "fieldname": "column_break_jdoae",
-   "fieldtype": "Column Break"
-  },
-  {
+   "fetch_from": "register_users.email_address",
    "fieldname": "email_id",
    "fieldtype": "Data",
    "label": "Email ID",
-   "options": "Email"
+   "read_only": 1
   },
   {
+   "fetch_from": "register_users.contact",
    "fieldname": "phone_no",
    "fieldtype": "Phone",
    "label": "Phone No",
-   "options": "Phone"
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -151,12 +159,22 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_qhziy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "d_locker_fee",
+   "fieldtype": "Check",
+   "label": "Discount on Locker Fee"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-05 18:51:06.199547",
+ "modified": "2024-01-07 20:17:50.875944",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",
