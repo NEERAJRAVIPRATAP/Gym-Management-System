@@ -6,6 +6,7 @@
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
+ "email_append_to": 1,
  "engine": "InnoDB",
  "field_order": [
   "first_name",
@@ -111,7 +112,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-07 00:40:59.717542",
+ "modified": "2024-01-08 00:16:16.861492",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Member Name",
@@ -131,18 +132,11 @@
    "write": 1
   }
  ],
+ "sender_field": "email_address",
+ "sender_name_field": "full_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [
-  {
-   "color": "Green",
-   "title": "Active"
-  },
-  {
-   "color": "Red",
-   "title": "Occupied"
-  }
- ],
+ "states": [],
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

@@ -2,16 +2,70 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Member Name', {
- 
-
-	validate: function (frm)
-	{
-		
-	   frm.set_value("full_name",frm.doc.first_name+" "+frm.doc.last_name) 	
+	validate: function (frm) {
+		frm.set_value("full_name", frm.doc.first_name + " " + frm.doc.last_name);
 	},
-	before_submit: function (frm) {
+})
+
+
+
+    /*before_submit: function (frm) {
+        frappe.call({
+            method: 'gym_management_system.gym_management_system.doctype.gym_member_name.gym_member_name.set_details',
+            
+            freeze: true,
+            callback: function (r) {
+                Trainer Member List
+                    frm.clear_table("member_details");
+
+                    r.message.forEach(gym_member_name => {
+                        let row = frm.add_child("member_details");
+                        row.member_full_name = gym_member_name.full_name;
+                        row.member_email = gym_member_name.email_address;
+                        row.member_phone = gym_member_name.contact;
+                    });
+
+                    frm.refresh_field("member_details");
+                
+            }
+        });
+    }
+});
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	/*before_submit:function(frm) {
         
-		frappe.call({
+		frm.call({
+			doc:frm.doc,
+			method: 'set_details',
+			
+			
+			callback: function (r) {
+				if (r.message) {
+					frappe.msgprint(r.message);
+				}
+			}
+		})
+
+	}
+
+
+	/*before_submit: function (frm) {
+        
+		frm.call({
+			doc:frm.doc,
 			
 			method: "gym_management_system.gym_management_system.doctype.gym_member_name.gym_member_name.new_document",
 			args: {
@@ -64,7 +118,7 @@ frappe.ui.form.on('Gym Member Name', {
 		
 	
 	
-});
+
 	
 
 	
