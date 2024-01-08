@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format: Locker No-{locker_no}",
+ "autoname": "field:locker_id",
  "creation": "2024-01-03 18:13:09.189175",
  "default_view": "List",
  "doctype": "DocType",
@@ -12,24 +12,20 @@
   "locker_type",
   "locker_start_time",
   "locker_end_time",
-  "locker_fee",
-  "locker_status"
+  "locker_fee"
  ],
  "fields": [
   {
-   "fieldname": "locker_id",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Locker No.",
-   "options": "Gym Locker"
-  },
-  {
+   "bold": 1,
+   "fetch_from": "locker_id.locker_fee",
    "fieldname": "locker_fee",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Locker Fee"
+   "label": "Locker Fee",
+   "read_only": 1
   },
   {
+   "default": "Now",
    "fieldname": "locker_start_time",
    "fieldtype": "Datetime",
    "in_list_view": 1,
@@ -42,27 +38,32 @@
    "label": "To"
   },
   {
+   "fetch_from": "locker_id.locker_type",
    "fieldname": "locker_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Locker Type",
-   "options": "Small\nMedium\nLarge"
-  },
-  {
-   "fieldname": "locker_status",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Locker Status"
+   "label": "Locker Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "locker_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Locker ID",
+   "options": "Gym Locker",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-05 18:41:32.249700",
+ "modified": "2024-01-07 18:04:54.243477",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Locker child in membership",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
