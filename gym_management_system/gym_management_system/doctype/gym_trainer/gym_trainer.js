@@ -18,16 +18,11 @@ frappe.ui.form.on('Gym Trainer', {
     weight_lifting: function(frm) {
         updateTotal(frm);
     },
-
     after_save: function(frm){
         var doc_first_name = frm.doc.first_name;
-
-
-        
         var doc_name = frm.doc.name
         console.log(doc_name);
         console.log(doc_first_name);
-
         frappe.call({
             method: 'gym_management_system.gym_management_system.doctype.gym_trainer.gym_trainer.Set_Memeber_list',
             args: {
@@ -42,13 +37,9 @@ frappe.ui.form.on('Gym Trainer', {
         });
 }
 
-
 });
-
-
 function updateTotal(frm) {
     var total = 0;
-
     if (frm.doc.zumba == 1) {
         total += frm.doc.zumba_fee;
     }
@@ -64,7 +55,5 @@ function updateTotal(frm) {
     if (frm.doc.weight_lifting == 1) {
         total += frm.doc.weight_lifting_fee;
     }
-
     frm.set_value('total', total);
-}
 

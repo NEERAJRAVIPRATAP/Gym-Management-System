@@ -12,6 +12,7 @@ class GymMemberName(Document):
         gym_trainer.append("member_details",
                    {
                        "member_name":doc.name,
+                       "member_full_name":doc.full_name,
                        "member_email":doc.email_address,
                        "member_phone":doc.contact
                    })
