@@ -8,7 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "member_assign",
+  "gym_member",
   "amount_01",
   "duration_subscription",
   "section_break_fobqm",

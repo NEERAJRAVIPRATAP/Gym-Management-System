@@ -27,24 +27,28 @@
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "label": "Start Date",
+   "read_only": 1
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "label": "End Date",
+   "read_only": 1
   },
   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
    "label": "Gym Member",
-   "options": "Gym Member Name"
+   "options": "Gym Member Name",
+   "read_only": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Available\nOccupied"
+   "options": "Available\nOccupied",
+   "read_only": 1
   },
   {
    "fieldname": "locker_type",
@@ -60,7 +64,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-06 23:41:33.956336",
+ "modified": "2024-01-08 18:13:06.933272",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Locker",

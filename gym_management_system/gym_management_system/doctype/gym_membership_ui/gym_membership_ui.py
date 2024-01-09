@@ -7,14 +7,17 @@ class GymMembershipUI(Document):
 from frappe.exceptions import DoesNotExistError         # subscription duration
 @frappe.whitelist()
 def show(llll):
-    try:
-        doc = frappe.get_doc('Gym Subscription', llll)
-        x = doc.duration_subscription
-        return x
-    except frappe.DoesNotExistError:
-        frappe.msgprint(f"Gym Subscription with ID {llll} not found.")
-        return 0
-    
+    if (llll):
+        try:
+            doc = frappe.get_doc('Gym Subscription', llll)
+            x = doc.duration_subscription
+            y = doc.amount_01
+            return x, y
+        except frappe.DoesNotExistError:
+            frappe.msgprint(f"Gym Subscription with ID {llll} not found.")
+            return 0
+    elif (not llll):
+        return "Empty String"
     
 import ast      # locker updation
 @frappe.whitelist()
@@ -50,7 +53,27 @@ def snow(arg):
 #     return "subs update worked"
 
 
-
+import ast      # Subscription updation
+@frappe.whitelist()
+def techi(arg):
+    name = ast.literal_eval(arg)
+    doc = frappe.get_doc("Gym Membership UI", name[2])
+    register_users = doc.get('register_users')
+    table_get = doc.get('member_subscription_details')
+    for row in table_get:
+        x = row.get('locker_id')
+        y = row.get('locker_type')
+        a = row.get('locker_start_time')
+        b = row.get('locker_end_time')
+        z = row.get('locker_fee')
+        print(f"Processing locker_id: {x}, locker_type: {y}, start_time: {a}, end_time: {b}, locker_fee: {z}")
+        moc = frappe.get_doc('Gym Locker', x)
+        moc.start_date = a
+        moc.end_date = b
+        moc.gym_member = register_users
+        moc.status = "Occupied"
+        moc.save()
+    return "Worked", 18
 
   
 
