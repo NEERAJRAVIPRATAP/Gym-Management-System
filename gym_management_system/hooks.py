@@ -9,7 +9,7 @@ app_license = "wkndwk"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gym_management_system/css/gym_management_system.css"
+# app_include_css = "/assets/gym_management_system/css/gym_member_name.css"
 # app_include_js = "/assets/gym_management_system/js/gym_management_system.js"
 
 # include js, css files in header of web template
@@ -213,3 +213,6 @@ scheduler_events = {
 # auth_hooks = [
 # 	"gym_management_system.auth.validate"
 # ]
+doctype_list_js = {
+    "Gym Member Name": ["public/css/gym_member_name.css"],
+}

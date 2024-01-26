@@ -1,28 +1,21 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:GS-{YYYY}-{duration_subscription}",
+ "autoname": "format:{##}-{type}-{YYYY}-{duration_subscription}",
  "creation": "2024-01-03 18:02:51.926857",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "gym_member",
-  "amount_01",
+  "type",
+  "amount",
   "duration_subscription",
   "section_break_fobqm",
   "amended_from",
   "member_name"
  ],
  "fields": [
-  {
-   "fieldname": "amount_01",
-   "fieldtype": "Select",
-   "label": "Amount",
-   "options": "Rs.2000 :- Weight-Lifting\nRs.3000 :- Zumba\nRs.5000:- Yoga\nRs.4000 :- Cross-Fit\nRs.5000 :-Cardio\nRs.3500 :- Strength-Fitness",
-   "reqd": 1
-  },
   {
    "fieldname": "duration_subscription",
    "fieldtype": "Select",
@@ -46,21 +39,28 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "member_assign",
+   "fieldname": "member_name",
    "fieldtype": "Link",
-   "label": "Member Assign Subscription",
+   "label": "Assign Member",
    "options": "Gym Member Name"
   },
   {
-   "fieldname": "member_name",
-   "fieldtype": "Link",
-   "label": "Member Name",
-   "options": "Gym Member Name"
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Subscription Plan",
+   "options": "Zumba\nYoga\nCardio",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-08 11:19:57.024935",
+ "modified": "2024-01-09 13:15:06.461575",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Subscription",
