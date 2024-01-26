@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Membership-{register_users}-{###}",
+ "autoname": "format:Membership-{full_name}-{###}",
  "creation": "2024-01-03 21:51:23.976009",
  "default_view": "List",
  "doctype": "DocType",
@@ -19,6 +19,7 @@
   "section_break_pda3j",
   "trainer_allocated",
   "locker_allocate_section",
+  "locker_type_filter",
   "locker_allocated",
   "bill",
   "fee",
@@ -169,12 +170,18 @@
    "fieldname": "d_locker_fee",
    "fieldtype": "Check",
    "label": "Discount on Locker Fee"
+  },
+  {
+   "fieldname": "locker_type_filter",
+   "fieldtype": "Select",
+   "label": "Select Size",
+   "options": "Small\nMedium\nLarge"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-07 20:17:50.875944",
+ "modified": "2024-01-09 22:14:37.678539",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership UI",

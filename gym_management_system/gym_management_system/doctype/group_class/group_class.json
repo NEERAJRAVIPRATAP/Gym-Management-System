@@ -14,7 +14,11 @@
   "start_time",
   "end_time",
   "amended_from",
-  "full_name"
+  "members",
+  "gym_traainer",
+  "gym_member_nameeee",
+  "typeeee",
+  "emailllll"
  ],
  "fields": [
   {
@@ -56,16 +60,38 @@
    "reqd": 1
   },
   {
-   "fieldname": "full_name",
+   "fieldname": "members",
    "fieldtype": "Table",
-   "label": "Gym Member Name",
-   "options": "Gym Member Name"
+   "label": "Members",
+   "options": "Trainer Member List"
+  },
+  {
+   "fieldname": "gym_traainer",
+   "fieldtype": "Link",
+   "label": "Gym traainer",
+   "options": "Gym Trainer"
+  },
+  {
+   "fetch_from": "member_trainer.first_name",
+   "fieldname": "gym_member_nameeee",
+   "fieldtype": "Data",
+   "label": "Gym Member Nameeee"
+  },
+  {
+   "fieldname": "typeeee",
+   "fieldtype": "Data",
+   "label": "TYpeeee"
+  },
+  {
+   "fieldname": "emailllll",
+   "fieldtype": "Data",
+   "label": "Emailllll"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-07 11:09:40.074927",
+ "modified": "2024-01-10 16:16:26.510456",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Group Class",

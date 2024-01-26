@@ -1,47 +1,93 @@
 
-	function Ryzen(frm, cdt, cdn, row) {
-		var child_table_data = frm.doc.member_subscription_details || [];
-		$.each(child_table_data || [], function(index, row) {
-			var llll = row.subscription_type;
-			console.log(llll);
-			frappe.call({
-				method: 'gym_management_system.gym_management_system.doctype.gym_membership_ui.gym_membership_ui.show',
-				args: {
-					llll: llll
-				},
-				callback: function(response) {
-					if (response && response.message) {
-						var duration_subscription = parseInt(response.message);
-						row.end_date = frappe.datetime.add_months(row.start_date, duration_subscription);
-						row.amount = 5000;
-						row.total_subscription_amount = 5000 * duration_subscription;	
-				
-					}
-					frm.refresh_field('member_subscription_details');
+function Ryzen(frm, cdt, cdn, roow) {
+	var totalAmount = 0;
+	var child_table_data = frm.doc.member_subscription_details || [];
+	$.each(child_table_data || [], function(index, row) {
+		var llll = row.subscription_type;
+		// console.log(llll);
+		frappe.call({           // getting subscription duration
+			method: 'gym_management_system.gym_management_system.doctype.gym_membership_ui.gym_membership_ui.show',
+			args: {
+			llll	: llll
+			},
+			callback: function(response) {
+				if (response.message == 0) {
+					// console.log("Not Found")
 				}
-			});
+				else {
+					// const membershipString = response.message[1];
+					// const match = membershipString.match(/\d+$/);
+					  // const integerValue = match ? parseInt(match[0], 10) : null;
+					// console.log(integerValue);
+
+					var duration_subscription = parseInt(response.message);
+					row.end_date = frappe.datetime.add_months(row.start_date, duration_subscription);
+					 row.amount = response.message[1]
+					row.total_subscription_amount = response.message[1] * duration_subscription;	
+					totalAmount += row.total_subscription_amount;
+				}
+				frm.set_value('fee', totalAmount);
+				frm.refresh_field('fee');
+				frm.refresh_field('member_subscription_details');
+			}
 		});
+	});
+}
+
+
+	
+	function moye(frm, cdt, cdn, row) {
+		var totalAmount = 0;
+		var child_table_data = frm.doc.locker_allocated || [];
+	
+		$.each(child_table_data || [], function(index, row) {
+			totalAmount += row.locker_fee;
+		});
+			frm.set_value('locker_fee', totalAmount);
+			frm.refresh_field('locker_fee');
+		frm.refresh_field('locker_allocated');
 	}
 	
 
 
-frappe.ui.form.on('Member child in membership', {
+frappe.ui.form.on('Member child in membership',{
     subscription_type: Ryzen
+});
+frappe.ui.form.on('Locker child in membership',{
+    locker_id: moye
 });
 
 
 
 frappe.ui.form.on('Gym Membership UI', {	
 
-
 	member_subscription_details_onadd: function(frm, cdt, cdn) {
-        // Trigger subscription_type for each row in the 'member_subscription_details' child table
-        $.each(frm.doc.member_subscription_details || [], function(index, row) {
-            frm.events['subscription_type'](frm, cdt, cdn, row);
+        $.each(frm.doc.member_subscription_details || [], function(index, row1) {     //member_subscription_details is an Array here
+               frm.events['subscription_type'](frm, cdt, cdn, roow);
+        });
+    
+    },
+	locker_allocated_onadd: function(frm, cdt, cdn) {
+        $.each(frm.doc.locker_allocated || [], function(index, row) {
+              frm.events['locker_id'](frm, cdt, cdn, row);
         });
     
     },
 
+
+	// refresh: function(frm) {
+    //     frm.fields_dict['locker_allocated'].grid.get_field('locker_id').get_query = function(doc, cdt, cdn) {
+    //         var child = locals[cdt][cdn];
+            
+    //         // Add 3 months to the current date and time
+    //         var threeMonthsLater = frappe.datetime.now_datetime();
+	// 		// frm.set_value('locker_allocated', cdt, 'locker_end_time', threeMonthsLater);
+	// 		doc.set_value(cdt, cdn, 'locker_end_time', threeMonthsLater);
+    //         return {
+    //             default: threeMonthsLater
+    //         };
+    //     };
+    // },
 
 
 		// discount
@@ -130,24 +176,37 @@ d_locker_fee:function(frm){
 
 },
 
-    refresh: function(frm) {
-        frm.fields_dict['locker_allocated'].grid.get_field('locker_id').get_query = function(doc, cdt, cdn) {
-            var child_row = locals[cdt][cdn];
-            return {
-                filters: {
-                    status: "Available"
-                }
-            };
-        };
-    },
 
+refresh: function(frm) {
+	frm.fields_dict['locker_allocated'].grid.get_field('locker_id').get_query = function(doc, cdt, cdn) {
+		var child_row = locals[cdt][cdn];
+		var filters = {
+			      status: "Available"
+		};
+		if (frm.doc.locker_type_filter === ''){
+		filters.status = "Available"
+		}
+		if (frm.doc.locker_type_filter === 'Small'){
+			filters.locker_type = 'Small';
+		}
+		if (frm.doc.locker_type_filter === 'Medium'){
+			  filters.locker_type = 'Medium';
+		}
+		if (frm.doc.locker_type_filter === 'Large'){
+			  filters.locker_type = 'Large';
+		}
+		return {
+			filters: filters
+		};
+	};
+},
 
-    onload: function(frm) {
+    onload: function(frm) {     // subscription filter
         frm.fields_dict['member_subscription_details'].grid.get_field('subscription_type').get_query = function(doc, cdt, cdn) {
             var child_row = locals[cdt][cdn];
             return {
                 filters: {
-					 member_assign: ""
+					 member_assign: "Create New Subscription"
                 }
             };
         };
@@ -169,42 +228,26 @@ d_locker_fee:function(frm){
 	// },
 
 
-
-		// locker details update
-		before_submit: function(frm) {	
-			var membership_route = frappe.get_route()
-			// console.log("before call")
-			frappe.call({                                                                    
-				method: 'gym_management_system.gym_management_system.doctype.gym_membership_ui.gym_membership_ui.snow',
-				args: {
-					arg: membership_route
-				},
-				callback: function(response) {
-					if (response) {
-						console.log("locker update worked")
-					}
-				}
-			});
-		},
-
-
-		// // subscription member update
-		// after_submit: function(frm) {	 		
-		// 	var membership_route = frappe.get_route()
-		// 				console.log("before call")
-		// 	frappe.call({                                                                    
-		// 		method: 'gym_management_system.gym_management_system.doctype.gym_membership_ui.gym_membership_ui.rog',
-		// 		args: {
-		// 			arg: membership_route
-		// 		},
-		// 		callback: function(response) {
-		// 			if (response) {
-		// 				console.log("sub update worked")
+		// refresh: function(frm){
+		// 	frm.set_query('register_users', () => {  // “link” is field-type name linked to a Table
+		// 		return {
+		// 			filters: {
+		// 				creation: frm.doc.__last_sync_on || frappe.datetime.now_datetime()	
 		// 			}
 		// 		}
-		// 	});
-		// },
+		// 	})
+	 
+		// }	
+
+
+
+		on_submit: function(frm){
+			var u = frm.doc.register_users;
+			console.log('Worked');
+					frappe.set_route("Form", "Gym Member Name", u);
+		
+		}
+		
 
 
 });
-

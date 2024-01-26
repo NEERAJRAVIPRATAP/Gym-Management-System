@@ -17,6 +17,24 @@ class GymMemberName(Document):
                        "member_phone":doc.contact
                    })
         gym_trainer.save()
+        
+        
+    def before_save(doc):
+        try:
+            member_mail = doc.email_address
+            subject = "Welcome to Gtm Management System"
+            message = f"You are registered at Gym Management System with registration ID:{doc.name}"          
+            if member_mail:
+                frappe.sendmail(
+                    recipients=[member_mail],
+                    subject=subject,
+                    message=message
+                )     
+                frappe.msgprint("Registration mail sent to Member")
+        except Exception as e:
+            frappe.msgprint(f"Error: {str(e)}")
+            return {'success': False}
+        
         # a=frappe.get_doc("Gym Member Name",doc.name)
         # print(gym_trainer.name)
         # a.gym_trainer=gym_trainer.name
