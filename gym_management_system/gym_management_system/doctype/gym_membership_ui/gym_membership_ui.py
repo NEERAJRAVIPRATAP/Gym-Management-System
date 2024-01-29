@@ -1,9 +1,5 @@
-# Copyright (c) 2024, Nestorbird_Trainee_Team and contributors
-# For license information, please see license.txt
-
 import frappe
 from frappe.model.document import Document
-
 class GymMembershipUI(Document):
     pass
 
@@ -46,10 +42,7 @@ def snow(arg):
 # @frappe.whitelist()
 # def rog(arg):
 #     name = ast.literal_eval(arg)
-#     doc = frappe.get_doc("Gym Membership UI", name[2])
 #     register_users = doc.get('register_users')
-#     sub_type = doc.get('member_subscription_details')
-#     for row in sub_type:
 #         x = row.get('subscription_type')
 #         moc = frappe.get_doc('Gym Subscription', x)
 #         moc.member_assign = register_users
