@@ -38,13 +38,22 @@ frappe.ui.form.on('Gym Member Name', {
 function fetch_data(frm) {
     frappe.call({
         method: 'gym_management_system.gym_management_system.doctype.gym_member_name.gym_member_name.fetch_and_set_data',
+
         args: {
             self: frm.doc.name
         },
-        callback: function(response) {
-            console.log(response.message[0])
 
+        callback: function (response) {
+            if (response.message && response.message.length > 0) {
+                console.log(response.message[0]);
+                var data = response.message[0];
+                var start_time = data.start_time;
+                var end_time = data.end_time;
+                var class_type = data.class_type;
+                frappe.msgprint(`Dear Member ${frm.doc.full_name}, Your class type is ${class_type}. It will start on ${start_time} and end on ${end_time}`);
+            } else {
+                console.error("Response message is empty or not in the expected format.");
+            }
         }
     });
-    
 }
