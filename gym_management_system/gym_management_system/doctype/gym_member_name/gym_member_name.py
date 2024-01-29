@@ -30,9 +30,25 @@ def send_email_confirmation(member_doc):
         subject=frappe._('Confirmation Message'),
         message=message.format(member_name=member_doc.full_name),
     )
-'''from frappe import _
+@frappe.whitelist()
+def fetch_and_set_data():
+    source_data = frappe.get_list('Group Class',
+                                   fields=[ 'member_trainer',
+                                           'class_type', 
+                                           'start_time',
+                                           'end_time'])
+    return source_data
 
-def on_update(doc, method):
+
+
+
+
+
+
+
+
+
+'''def on_update(doc, method):
     # Fetch data from the gym_member_name record
     member_name = doc.name
     age = doc.age
@@ -49,7 +65,7 @@ def update_gym_trainer(member_name, age, email, contact):
     for trainer in trainers:
         trainer_doc = frappe.get_doc('Gym Trainer', trainer.name)
         # Update the child table records
-        for child in trainer_doc.get('child_table_field'):
+        for child in trainer_doc.get('member_details'):
             if child.member_name == member_name:
                 child.age = age
                 child.email = email
